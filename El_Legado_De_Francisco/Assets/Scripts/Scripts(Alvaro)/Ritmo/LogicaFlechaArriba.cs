@@ -35,7 +35,6 @@ public class LogicaFlechaArriba : MonoBehaviour
             }
         }
 
-
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
