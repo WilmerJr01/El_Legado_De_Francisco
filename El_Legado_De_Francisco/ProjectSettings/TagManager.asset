@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monte
   - Flecha
+  - Coleccionable
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Edificios
     uniqueID: 854850955
+    locked: 0
+  - name: Coleccionable
+    uniqueID: 2829791831
     locked: 0
