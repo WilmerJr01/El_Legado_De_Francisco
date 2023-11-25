@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 2456950119395395524}
   - component: {fileID: 9193692072903629864}
   m_Layer: 0
-  m_Name: New Palette
+  m_Name: PaletaNivel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
