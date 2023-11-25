@@ -7,6 +7,7 @@ TagManager:
   - Monte
   - Flecha
   - Coleccionable
+  - MiniEnemigo
   layers:
   - Default
   - TransparentFX
