@@ -39,7 +39,7 @@ public class BarraDeVida : MonoBehaviour
 
     public void ReducirVida(float cantidad)
 {
-    Debug.Log("Reduciendo vida: " + cantidad);
+   
     slider.value -= cantidad;
 }
 }

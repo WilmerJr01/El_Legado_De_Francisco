@@ -30,7 +30,7 @@ public class JugadorScript : MonoBehaviour
                 {
                     // Elimina el minienemigo
                     Destroy(minienemigo.gameObject);
-                    Debug.Log("Minienemigo eliminado con éxito.");
+                   
                 }
             }
 
@@ -49,7 +49,7 @@ public class JugadorScript : MonoBehaviour
                     if (minienemigo != null)
                     {
                         Destroy(minienemigo.gameObject);
-                        Debug.Log("Minienemigo eliminado con éxito.");
+                       
                     }
                 }
             }

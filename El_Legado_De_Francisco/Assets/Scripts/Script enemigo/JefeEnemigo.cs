@@ -16,8 +16,8 @@ public class JefeEnemigo : MonoBehaviour
     private Transform jugador;
     private float tiempoDesdeUltimaGeneracion = 0f;
 
-    // Variable para contar el número de golpes acertados
-    private int golpesAcertados = 0;
+    private int contadorGolpes = 0;
+    public float distanciaMaximaParaContador = 2.0f;
 
     void Start()
     {
@@ -26,6 +26,11 @@ public class JefeEnemigo : MonoBehaviour
 
     void Update()
     {
+        if (contadorGolpes == 5)
+    {
+        // Destruir el jefe
+        Destroy(gameObject);
+    }
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
         if (distanciaAlJugador < distanciaDeAccion)
@@ -65,15 +70,27 @@ public class JefeEnemigo : MonoBehaviour
     }
 
     // Método para manejar el ataque del jugador al jefe
-    public void RecibirAtaque()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Incrementar el contador de golpes acertados
-        golpesAcertados++;
+        if (collision.CompareTag("Player"))
+        {
+            // Verifica la distancia al jugador antes de contar el golpe
+            float distanciaAlJugador = Vector2.Distance(transform.position, collision.transform.position);
 
-        // Imprimir el número de golpes acertados en la consola
-        Debug.Log("Golpes Acertados: " + golpesAcertados);
+            if (distanciaAlJugador <= distanciaMaximaParaContador)
+            {
+                // Aumenta el contador de golpes
+                contadorGolpes++;
+
+                // Imprime el contador en la consola
+                Debug.Log("Golpe al JefeEnemigo. Contador: " + contadorGolpes);
+            }
+        }
     }
 }
+
+    
+
 
 
 

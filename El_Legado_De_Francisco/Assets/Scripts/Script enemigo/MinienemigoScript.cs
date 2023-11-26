@@ -42,13 +42,12 @@ public class MinienemigoScript : MonoBehaviour
 
             if (distanciaAlJugador <= distanciaDeCausarDanio + radioJugador)
             {
-                Debug.Log("Jugador lo suficientemente cerca para reducir la vida");
+
                 // Reducir la vida del jugador (ajusta la cantidad de daño según sea necesario)
                 barraDeVida.ReducirVida(3.0f * Time.deltaTime);
 
                 // Mensajes de depuración
-                Debug.Log("Distancia al jugador: " + distanciaAlJugador);
-                Debug.Log("Reduciendo vida...");
+               
             }
         }
     }
