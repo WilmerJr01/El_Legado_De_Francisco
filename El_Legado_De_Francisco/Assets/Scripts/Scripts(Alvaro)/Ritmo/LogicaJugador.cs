@@ -19,6 +19,9 @@ public class LogicaJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(puntaje == 10)
+        {
+            SceneManager.LoadScene("Escena #2");
+        }
     }
 }

@@ -21,7 +21,7 @@ public class LogicaEscena : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flecha")
         {
-            SceneManager.LoadScene("EscenaRitmo");
+            SceneManager.LoadScene("Escena #1");
         }
     }
 }
