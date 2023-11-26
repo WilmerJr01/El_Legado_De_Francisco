@@ -9,8 +9,15 @@ public class JefeEnemigo : MonoBehaviour
     public float distanciaDeAccion = 10f;
     public float tiempoEntreGeneraciones = 2.5f;
 
+    // Lista de puntos de destino del jefe
+    public List<Transform> puntosDestino;
+    private int indiceDestinoActual = 0;
+
     private Transform jugador;
     private float tiempoDesdeUltimaGeneracion = 0f;
+
+    // Variable para contar el número de golpes acertados
+    private int golpesAcertados = 0;
 
     void Start()
     {
@@ -19,43 +26,72 @@ public class JefeEnemigo : MonoBehaviour
 
     void Update()
     {
-        // Calcula la distancia entre el jefe y el jugador
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
-        // Si el jugador está dentro del campo de visión
         if (distanciaAlJugador < distanciaDeAccion)
         {
-            // Calcula la dirección en la que el jefe debe alejarse
-            Vector2 direccionAlejamiento = (transform.position - jugador.position).normalized;
+            // Obtiene el siguiente punto de destino del jefe
+            Vector2 destino = puntosDestino[indiceDestinoActual].position;
 
-            // Mueve al jefe en la dirección opuesta al jugador
-            transform.Translate(direccionAlejamiento * velocidadMovimiento * Time.deltaTime);
+            // Mueve al jefe hacia el punto de destino
+            transform.position = Vector2.MoveTowards(transform.position, destino, velocidadMovimiento * Time.deltaTime);
 
-            // Incrementa el tiempo desde la última generación
             tiempoDesdeUltimaGeneracion += Time.deltaTime;
 
-            // Si ha pasado el tiempo establecido, genera un nuevo minienemigo
             if (tiempoDesdeUltimaGeneracion >= tiempoEntreGeneraciones)
             {
                 GenerarMinienemigo();
-                tiempoDesdeUltimaGeneracion = 0f; // Reinicia el contador de tiempo
+                tiempoDesdeUltimaGeneracion = 0f;
+            }
+
+            // Verificar si el jefe ha alcanzado su destino actual
+            if (Vector2.Distance(transform.position, destino) < 0.1f)
+            {
+                // Cambiar al siguiente punto de destino
+                indiceDestinoActual = (indiceDestinoActual + 1) % puntosDestino.Count;
             }
         }
     }
 
     void GenerarMinienemigo()
     {
-        // Instancia el minienemigo en la posición del jefe
         GameObject minienemigo = Instantiate(minienemigoPrefab, transform.position, Quaternion.identity);
-
-        // Configura el minienemigo para que persiga al jugador
         MinienemigoScript minienemigoScript = minienemigo.GetComponent<MinienemigoScript>();
+
         if (minienemigoScript != null)
         {
             minienemigoScript.SetJugador(jugador);
         }
     }
+
+    // Método para manejar el ataque del jugador al jefe
+    public void RecibirAtaque()
+    {
+        // Incrementar el contador de golpes acertados
+        golpesAcertados++;
+
+        // Imprimir el número de golpes acertados en la consola
+        Debug.Log("Golpes Acertados: " + golpesAcertados);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

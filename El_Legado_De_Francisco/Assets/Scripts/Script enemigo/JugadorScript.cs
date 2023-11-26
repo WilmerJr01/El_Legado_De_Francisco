@@ -6,41 +6,83 @@ public class JugadorScript : MonoBehaviour
 {
     public float distanciaAtaque = 1.5f;
     public LayerMask capaMinienemigo;
-    public float anguloPermitido = 45f; // Ángulo permitido para el ataque
 
     void Update()
     {
         // Verifica si el jugador presiona la tecla P
         if (Input.GetKeyDown(KeyCode.P))
         {
-            // Detecta minienemigos en la posición del jugador
-            Collider2D[] minienemigos = Physics2D.OverlapCircleAll(transform.position, distanciaAtaque, capaMinienemigo);
+            // Obtiene la dirección local hacia la derecha del objeto del jugador
+            Vector2 direccionDerechaLocal = transform.right;
 
-            // Itera sobre todos los minienemigos y elimínalos si el jugador está mirando en su dirección
+            // Calcula la posición del punto de ataque
+            Vector2 puntoDeAtaque = (Vector2)transform.position + direccionDerechaLocal * distanciaAtaque;
+
+            // Realiza un overlapCircle en el punto de ataque para detectar minienemigos
+            Collider2D[] minienemigos = Physics2D.OverlapCircleAll(puntoDeAtaque, 0.1f, capaMinienemigo);
+
+            // Itera sobre todos los minienemigos y elimínalos
             foreach (Collider2D minienemigoCollider in minienemigos)
             {
                 MinienemigoScript minienemigo = minienemigoCollider.GetComponent<MinienemigoScript>();
 
                 if (minienemigo != null)
                 {
-                    // Calcula la dirección al minienemigo
-                    Vector2 direccionAlMinienemigo = (minienemigo.transform.position - transform.position).normalized;
+                    // Elimina el minienemigo
+                    Destroy(minienemigo.gameObject);
+                    Debug.Log("Minienemigo eliminado con éxito.");
+                }
+            }
 
-                    // Calcula el ángulo entre la dirección de mira del jugador y la dirección al minienemigo
-                    float anguloDerecha = Vector2.Angle(transform.right, direccionAlMinienemigo);
-                    float anguloIzquierda = Vector2.Angle(-transform.right, direccionAlMinienemigo);
+            // Si no se encontraron minienemigos en la dirección hacia la derecha, intentamos hacia la izquierda
+            if (minienemigos.Length == 0)
+            {
+                Vector2 direccionIzquierdaLocal = -transform.right;
+                puntoDeAtaque = (Vector2)transform.position + direccionIzquierdaLocal * distanciaAtaque;
 
-                    // Si el ángulo es menor que el permitido en ambas direcciones, el jugador está mirando hacia el minienemigo
-                    if (anguloDerecha < anguloPermitido || anguloIzquierda < anguloPermitido)
+                minienemigos = Physics2D.OverlapCircleAll(puntoDeAtaque, 0.1f, capaMinienemigo);
+
+                foreach (Collider2D minienemigoCollider in minienemigos)
+                {
+                    MinienemigoScript minienemigo = minienemigoCollider.GetComponent<MinienemigoScript>();
+
+                    if (minienemigo != null)
                     {
-                        // Elimina el minienemigo
                         Destroy(minienemigo.gameObject);
+                        Debug.Log("Minienemigo eliminado con éxito.");
                     }
                 }
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -8,6 +8,8 @@ TagManager:
   - Flecha
   - Coleccionable
   - MiniEnemigo
+  - Obstacle
+  - capaMinienemigo
   layers:
   - Default
   - TransparentFX
@@ -56,4 +58,7 @@ TagManager:
     locked: 0
   - name: Coleccionable
     uniqueID: 2829791831
+    locked: 0
+  - name: obstaculoLayer
+    uniqueID: 1838987781
     locked: 0
