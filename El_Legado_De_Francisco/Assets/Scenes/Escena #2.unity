@@ -19086,6 +19086,7 @@ MonoBehaviour:
     m_Bits: 1
   contadorGolpes: 0
   distanciaMaximaParaContador: 1
+  empuje: -1
 --- !u!1 &374013111
 GameObject:
   m_ObjectHideFlags: 0
@@ -19563,7 +19564,7 @@ MonoBehaviour:
   - {fileID: 2098882885}
   - {fileID: 213837398}
   - {fileID: 1149351768}
-  distanciaMaximaParaContador: 20
+  distanciaMaximaParaContador: 2
 --- !u!212 &593214164
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20496,9 +20497,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: 2
-  distanciaMaxima: 1
+  distanciaMaxima: 0.8
   barraDeVida: {fileID: 254514543}
-  distanciaDeCausarDanio: 1
+  distanciaDeCausarDanio: 0.8
   umbralCambioDireccion: 0.5
 --- !u!212 &1107393450
 SpriteRenderer:

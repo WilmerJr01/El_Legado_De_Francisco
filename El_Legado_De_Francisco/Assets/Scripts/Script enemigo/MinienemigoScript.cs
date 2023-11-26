@@ -10,7 +10,6 @@ public class MinienemigoScript : MonoBehaviour
     public BarraDeVida barraDeVida; // Asegúrate de asignar esto en el Inspector
     public float distanciaDeCausarDanio = 1.0f;
     private float distanciaAlJugador;
-    private bool mirandoDerecha = true; // Asumimos que inicialmente está mirando hacia la derecha
     public float umbralCambioDireccion = 0.5f; // Ajusta según sea necesario
     private Animator playerAnimator;
 
@@ -51,17 +50,7 @@ public class MinienemigoScript : MonoBehaviour
                 }
 
                 // Cambia la dirección solo si ha cambiado y la distancia es mayor que el umbral
-                if (direccionAlJugador.x > 0 && !mirandoDerecha && Mathf.Abs(direccionAlJugador.x) > umbralCambioDireccion)
-                {
-                    // Mira hacia la derecha
-                    mirandoDerecha = true;
-                }
-                else if (direccionAlJugador.x < 0 && mirandoDerecha && Mathf.Abs(direccionAlJugador.x) > umbralCambioDireccion)
-                {
-                    // Mira hacia la izquierda
-                    mirandoDerecha = false;
-                }
-            }
+               
         }
 
         // Ajusta la condición para aplicar daño
@@ -73,11 +62,27 @@ public class MinienemigoScript : MonoBehaviour
             {
                 // Reducir la vida del jugador (ajusta la cantidad de daño según sea necesario)
                 barraDeVida.ReducirVida(3.0f * Time.deltaTime);
+                GameObject objplayer = GameObject.FindGameObjectWithTag("Player");
+                JugadorScript player = objplayer.GetComponent<JugadorScript>();
+                player.CambiarColorJugador(Color.red);
+                //player.Retroceder();
+
+                //enemigo se aleja al causar daño
+                //Transform miTransform = transform;
+
+        // Modificar la posición en el eje X
+       // float distanciaMaximaMovimiento = 0.5f; // Ajusta el valor según sea necesario
+       // float nuevaPosicionX = Mathf.Clamp(miTransform.position.x + 0.1f, miTransform.position.x - distanciaMaximaMovimiento, miTransform.position.x + distanciaMaximaMovimiento);
+
+        // Aplicar la nueva posición
+        //miTransform.position = new Vector3(nuevaPosicionX, miTransform.position.y, miTransform.position.z);
 
                 // Mensajes de depuración
             }
         }
+        
     }
+}
 }
 
 
