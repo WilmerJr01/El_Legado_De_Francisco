@@ -59,6 +59,6 @@ TagManager:
   - name: Coleccionable
     uniqueID: 2829791831
     locked: 0
-  - name: obstaculoLayer
+  - name: capaJefeEnemigo
     uniqueID: 1838987781
     locked: 0

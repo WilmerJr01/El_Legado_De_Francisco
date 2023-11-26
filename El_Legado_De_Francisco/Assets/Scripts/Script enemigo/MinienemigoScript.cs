@@ -7,10 +7,11 @@ public class MinienemigoScript : MonoBehaviour
     private Transform jugador;
     public float velocidadMovimiento = 5f;
     public float distanciaMaxima = 5f; // Distancia máxima al jugador
-
     public BarraDeVida barraDeVida; // Asegúrate de asignar esto en el Inspector
     public float distanciaDeCausarDanio = 1.0f;
-    float distanciaAlJugador;
+    private float distanciaAlJugador;
+    private bool mirandoDerecha = true; // Asumimos que inicialmente está mirando hacia la derecha
+    public float umbralCambioDireccion = 0.5f; // Ajusta según sea necesario
 
     public void SetJugador(Transform jugadorTransform)
     {
@@ -32,6 +33,18 @@ public class MinienemigoScript : MonoBehaviour
 
                 // Mueve al minienemigo en la dirección hacia el jugador
                 transform.Translate(direccionAlJugador * velocidadMovimiento * Time.deltaTime);
+
+                // Cambia la dirección solo si ha cambiado y la distancia es mayor que el umbral
+                if (direccionAlJugador.x > 0 && !mirandoDerecha && Mathf.Abs(direccionAlJugador.x) > umbralCambioDireccion)
+                {
+                    // Mira hacia la derecha
+                    mirandoDerecha = true;
+                }
+                else if (direccionAlJugador.x < 0 && mirandoDerecha && Mathf.Abs(direccionAlJugador.x) > umbralCambioDireccion)
+                {
+                    // Mira hacia la izquierda
+                    mirandoDerecha = false;
+                }
             }
         }
 
@@ -42,16 +55,19 @@ public class MinienemigoScript : MonoBehaviour
 
             if (distanciaAlJugador <= distanciaDeCausarDanio + radioJugador)
             {
-
                 // Reducir la vida del jugador (ajusta la cantidad de daño según sea necesario)
                 barraDeVida.ReducirVida(3.0f * Time.deltaTime);
 
                 // Mensajes de depuración
-               
             }
         }
     }
 }
+
+
+
+
+
 
 
 
