@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 906fbc28251e405488b61f303a6a6223
+guid: da72d1620c6db284ea8cb3fe165e68fc
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 32
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638366003936538671
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,9 +119,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: fantasma4-izq_Frame_0
+  - name: MiniDerecha_Frame_0
     originalName: 
-    pivot: {x: 0.4814815, y: -0.33333334}
+    pivot: {x: 0.5918236, y: 0.38638884}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 4
       width: 27
       height: 33
-    spriteID: dbb85aaceedd84c408140f95a940d033
+    spriteID: b66afc4de351b4043be302605faebd73
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,9 +139,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: fantasma4-izq_Frame_1
+  - name: MiniDerecha_Frame_1
     originalName: 
-    pivot: {x: 0.4814815, y: -0.36363637}
+    pivot: {x: 0.5918236, y: 0.3903581}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 45
       width: 27
       height: 33
-    spriteID: 67f6d6022966e8544a8480f296a6abd6
+    spriteID: 889e97e649c41be4f81b9bda31b3a27c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,9 +159,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 45}
-  - name: fantasma4-izq_Frame_2
+  - name: MiniDerecha_Frame_2
     originalName: 
-    pivot: {x: 0.4814815, y: -0.375}
+    pivot: {x: 0.58135146, y: 0.3848853}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 86
       width: 27
       height: 32
-    spriteID: f80327b9b3bf0ae4cab79434c86032b6
+    spriteID: 6b6d573e52a85ca4d83fdaba5257d65f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -179,9 +179,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 86}
-  - name: fantasma4-izq_Frame_3
+  - name: MiniDerecha_Frame_3
     originalName: 
-    pivot: {x: 0.4814815, y: -0.34375}
+    pivot: {x: 0.5918237, y: 0.3984635}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 4
       width: 27
       height: 32
-    spriteID: 41efa6e711753d844b757c10db79b134
+    spriteID: 67953c15e8716ca4e8ec2b50581f95d0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -202,47 +202,95 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1725038718
-    name: fantasma4-izq
+    guid: -597896233
+    name: MiniDerecha
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: fantasma4-izq_Frame_0
+    - name: MiniDerecha_Frame_0
       frameIndex: 0
       cellRect:
-        x: 3
+        x: 2
         y: 11
         width: 27
         height: 33
-      spriteId: dbb85aaceedd84c408140f95a940d033
-    - name: fantasma4-izq_Frame_1
+      spriteId: b66afc4de351b4043be302605faebd73
+    - name: MiniDerecha_Frame_1
       frameIndex: 1
       cellRect:
-        x: 3
+        x: 2
         y: 12
         width: 27
         height: 33
-      spriteId: 67f6d6022966e8544a8480f296a6abd6
-    - name: fantasma4-izq_Frame_2
+      spriteId: 889e97e649c41be4f81b9bda31b3a27c
+    - name: MiniDerecha_Frame_2
       frameIndex: 2
       cellRect:
-        x: 3
+        x: 2
         y: 12
         width: 27
         height: 32
-      spriteId: f80327b9b3bf0ae4cab79434c86032b6
-    - name: fantasma4-izq_Frame_3
+      spriteId: 6b6d573e52a85ca4d83fdaba5257d65f
+    - name: MiniDerecha_Frame_3
       frameIndex: 3
       cellRect:
-        x: 3
+        x: 2
         y: 11
         width: 27
         height: 32
-      spriteId: 41efa6e711753d844b757c10db79b134
+      spriteId: 67953c15e8716ca4e8ec2b50581f95d0
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 48}
