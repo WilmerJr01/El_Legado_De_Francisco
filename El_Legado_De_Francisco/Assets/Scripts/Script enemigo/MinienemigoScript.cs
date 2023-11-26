@@ -12,10 +12,18 @@ public class MinienemigoScript : MonoBehaviour
     private float distanciaAlJugador;
     private bool mirandoDerecha = true; // Asumimos que inicialmente está mirando hacia la derecha
     public float umbralCambioDireccion = 0.5f; // Ajusta según sea necesario
+    private Animator playerAnimator;
+
 
     public void SetJugador(Transform jugadorTransform)
     {
         jugador = jugadorTransform;
+
+    }
+
+    void Start()
+    {
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -33,6 +41,14 @@ public class MinienemigoScript : MonoBehaviour
 
                 // Mueve al minienemigo en la dirección hacia el jugador
                 transform.Translate(direccionAlJugador * velocidadMovimiento * Time.deltaTime);
+                playerAnimator.SetFloat("Speed", velocidadMovimiento);
+
+                playerAnimator.SetFloat("Horizontal", direccionAlJugador.x);
+                if (direccionAlJugador.x != 0)
+                {
+                    float auxX = direccionAlJugador.x;
+                    playerAnimator.SetFloat("Vertical", auxX);
+                }
 
                 // Cambia la dirección solo si ha cambiado y la distancia es mayor que el umbral
                 if (direccionAlJugador.x > 0 && !mirandoDerecha && Mathf.Abs(direccionAlJugador.x) > umbralCambioDireccion)
