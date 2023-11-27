@@ -9,6 +9,7 @@ public class JugadorScript : MonoBehaviour
     public LayerMask capaMinienemigo;
     public int contadorGolpes;
     public float distanciaMaximaParaContador = 2.0f;
+    [SerializeField] private PuntajeJugador puntaje;
 
     public int empuje=-3;
 
@@ -51,6 +52,7 @@ public class JugadorScript : MonoBehaviour
                     {
                         // Elimina el minienemigo
                         Destroy(minienemigo.gameObject);
+                        puntaje.SumarPuntos(10f); //Puntos del jugador al matar un minienemigo
                     }
                 }
             }
@@ -86,6 +88,8 @@ public class JugadorScript : MonoBehaviour
                 if (contadorGolpes == 5)
                 {
                     Destroy(collision.gameObject);
+                        puntaje.SumarPuntos(100f);
+
                     //Cambiarde escena 
                     //SceneManager.LoadScene("Score");
                 }
