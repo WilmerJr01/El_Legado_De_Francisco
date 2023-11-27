@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Combate_Jugador : MonoBehaviour
 {
@@ -22,16 +23,25 @@ public class Combate_Jugador : MonoBehaviour
         barraDeVida.CambiarVidaActual(vida);
         if(vida <= 0){
             Destroy(gameObject);
+            SceneManager.LoadScene(3);
         }
 
     }
 
-    public void Curar(float curacion){
-        if ((vida+curacion)>maximoVida){
-            vida=maximoVida;
-        } else {
-            vida += curacion;
-        }
+    public void Curar(float curacion)
+{
+    if ((vida + curacion) > maximoVida)
+    {
+        vida = maximoVida;
     }
+    else
+    {
+        vida += curacion;
+    }
+
+    // Agrega esta línea para actualizar la barra de vida
+    barraDeVida.CambiarVidaActual(vida);
+}
+
     // Update is called once per fram
 }

@@ -17,6 +17,8 @@ public class JefeEnemigo : MonoBehaviour
     private float tiempoDesdeUltimaGeneracion = 0f;
     public float distanciaMaximaParaContador = 2.0f;
 
+    public bool vivo = true;
+
     // Variable para controlar la dirección del jefe
     private int direccion = 1; // 1 para derecha, -1 para izquierda
 
@@ -27,44 +29,45 @@ public class JefeEnemigo : MonoBehaviour
 
     void Update()
     {
-        float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
-        if (distanciaAlJugador < distanciaDeAccion)
+        if (jugador != null)
         {
-            // Obtiene el siguiente punto de destino del jefe
-            Vector2 destino = puntosDestino[indiceDestinoActual].position;
+            float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
-            // Mueve al jefe hacia el punto de destino
-            transform.position = Vector2.MoveTowards(transform.position, destino, velocidadMovimiento * Time.deltaTime);
-
-            // Verificar y actualizar la dirección del jefe
-            if (transform.position.x < destino.x)
+            if (distanciaAlJugador < distanciaDeAccion)
             {
-                direccion = 1; // Mover a la derecha
-            }
-            else
-            {
-                direccion = -1; // Mover a la izquierda
-            }
+                // Obtiene el siguiente punto de destino del jefe
+                Vector2 destino = puntosDestino[indiceDestinoActual].position;
 
-            // Reflejar el sprite horizontalmente según la dirección
-            transform.localScale = new Vector3(direccion, 1, 1);
+                // Mueve al jefe hacia el punto de destino
+                transform.position = Vector2.MoveTowards(transform.position, destino, velocidadMovimiento * Time.deltaTime);
 
-            tiempoDesdeUltimaGeneracion += Time.deltaTime;
+                // Verificar y actualizar la dirección del jefe
 
-            if (tiempoDesdeUltimaGeneracion >= tiempoEntreGeneraciones)
-            {
-                GenerarMinienemigo();
-                tiempoDesdeUltimaGeneracion = 0f;
-            }
+                // Reflejar el sprite horizontalmente según la dirección
+                transform.localScale = new Vector3(direccion, 1, 1);
 
-            // Verificar si el jefe ha alcanzado su destino actual
-            if (Vector2.Distance(transform.position, destino) < 0.1f)
-            {
-                // Cambiar al siguiente punto de destino
-                indiceDestinoActual = (indiceDestinoActual + 1) % puntosDestino.Count;
+                tiempoDesdeUltimaGeneracion += Time.deltaTime;
+
+                if (tiempoDesdeUltimaGeneracion >= tiempoEntreGeneraciones)
+                {
+                    GenerarMinienemigo();
+                    tiempoDesdeUltimaGeneracion = 0f;
+                }
+
+                // Verificar si el jefe ha alcanzado su destino actual
+                if (Vector2.Distance(transform.position, destino) < 0.1f)
+                {
+                    // Cambiar al siguiente punto de destino
+                    indiceDestinoActual = (indiceDestinoActual + 1) % puntosDestino.Count;
+                }
             }
         }
+
+
+
+
+
     }
 
     void GenerarMinienemigo()
@@ -76,6 +79,11 @@ public class JefeEnemigo : MonoBehaviour
         {
             minienemigoScript.SetJugador(jugador);
         }
+    }
+    public void aumentarDificultad()
+    {
+        velocidadMovimiento = 5 + velocidadMovimiento;
+        tiempoEntreGeneraciones -= 3f;
     }
 
     // Método para manejar el ataque del jugador al jefe

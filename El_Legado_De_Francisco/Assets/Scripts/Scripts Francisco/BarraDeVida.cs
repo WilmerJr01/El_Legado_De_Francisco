@@ -8,14 +8,21 @@ using UnityEngine.SceneManagement;
 public class BarraDeVida : MonoBehaviour
 {
     protected Slider slider;
-  
+    public Combate_Jugador jugador;
+
 
     private void Start()
     {
         InicializarBarraDeVida(1);
     }
-    void Update(){
-       slider.onValueChanged.AddListener(OnSliderValueChanged);
+    void Update()
+    {
+        GameObject jefe = GameObject.FindGameObjectWithTag("JefeEnemigo");
+        if (jugador != null)
+        {
+            slider.onValueChanged.AddListener(OnSliderValueChanged);
+
+        }
     }
 
     public void CambiarVidaMaxima(float vidaMaxima)
@@ -43,11 +50,11 @@ public class BarraDeVida : MonoBehaviour
     }
 
     public void ReducirVida(float cantidad)
-{
-   
-    slider.value -= cantidad;
-}
-private void OnSliderValueChanged(float value)
+    {
+
+        slider.value -= cantidad;
+    }
+    private void OnSliderValueChanged(float value)
     {
         if (value <= 0f)
         {
