@@ -12,6 +12,7 @@ public class JugadorScript : MonoBehaviour
     [SerializeField] private PuntajeJugador puntaje;
 
     public int empuje=-3;
+    public float n_vel=2;
 
     void Update()
     {
@@ -75,6 +76,20 @@ public class JugadorScript : MonoBehaviour
                 // Aumenta el contador de golpes
                 contadorGolpes++;
                 SpriteRenderer jefeSpriteRenderer = collision.GetComponent<SpriteRenderer>();
+
+
+                GameObject jefe = GameObject.FindGameObjectWithTag("JefeEnemigo");
+                JefeEnemigo jefe1 = jefe.GetComponent<JefeEnemigo>();
+
+                if(contadorGolpes%2 == 0 && contadorGolpes!=0){
+                    jefe1.velocidadMovimiento+=0.1f;
+                    n_vel = jefe1.velocidadMovimiento;
+                    jefe1.tiempoEntreGeneraciones-=0.1f;
+                }
+
+
+
+
                 if (jefeSpriteRenderer != null)
                 {
                     jefeSpriteRenderer.color = Color.red;
@@ -85,7 +100,7 @@ public class JugadorScript : MonoBehaviour
                 // Imprime el contador en la consola
                 Debug.Log("Golpe al JefeEnemigo. Contador: " + contadorGolpes);
 
-                if (contadorGolpes == 5)
+                if (contadorGolpes == 20)
                 {
                     Destroy(collision.gameObject);
                         puntaje.SumarPuntos(100f);
@@ -119,7 +134,8 @@ public class JugadorScript : MonoBehaviour
         if (jefe != null)
         {
             JefeEnemigo jefe1 = jefe.GetComponent<JefeEnemigo>();
-            jefe1.velocidadMovimiento = 4;
+            jefe1.velocidadMovimiento+=2;
+            
             Invoke("restaurarEnemigo", 1f);
         }
 
@@ -130,7 +146,7 @@ public class JugadorScript : MonoBehaviour
         if (jefe != null)
         {
             JefeEnemigo jefe1 = jefe.GetComponent<JefeEnemigo>();
-            jefe1.velocidadMovimiento = 2;
+            jefe1.velocidadMovimiento = n_vel;
            
         }
     }

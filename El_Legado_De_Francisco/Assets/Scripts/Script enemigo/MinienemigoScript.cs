@@ -7,7 +7,7 @@ public class MinienemigoScript : MonoBehaviour
     private Transform jugador;
     public float velocidadMovimiento = 5f;
     public float distanciaMaxima = 5f; // Distancia máxima al jugador
-    public BarraDeVida barraDeVida; // Asegúrate de asignar esto en el Inspector
+    public Combate_Jugador jugador1; // Asegúrate de asignar esto en el Inspector
     public float distanciaDeCausarDanio = 1.0f;
     private float distanciaAlJugador;
     public float umbralCambioDireccion = 0.5f; // Ajusta según sea necesario
@@ -61,7 +61,8 @@ public class MinienemigoScript : MonoBehaviour
             if (distanciaAlJugador <= distanciaDeCausarDanio + radioJugador)
             {
                 // Reducir la vida del jugador (ajusta la cantidad de daño según sea necesario)
-                barraDeVida.ReducirVida(3.0f * Time.deltaTime);
+                jugador1.TomarDaño(5*Time.deltaTime);
+                
                 GameObject objplayer = GameObject.FindGameObjectWithTag("Player");
                 JugadorScript player = objplayer.GetComponent<JugadorScript>();
                 player.CambiarColorJugador(Color.red);
