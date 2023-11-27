@@ -3,14 +3,19 @@ using System.Collections.Generic;
 // BarraDeVida.cs
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BarraDeVida : MonoBehaviour
 {
     protected Slider slider;
+  
 
     private void Start()
     {
         InicializarBarraDeVida(1);
+    }
+    void Update(){
+       slider.onValueChanged.AddListener(OnSliderValueChanged);
     }
 
     public void CambiarVidaMaxima(float vidaMaxima)
@@ -42,4 +47,15 @@ public class BarraDeVida : MonoBehaviour
    
     slider.value -= cantidad;
 }
+private void OnSliderValueChanged(float value)
+    {
+        if (value <= 0f)
+        {
+            // El Slider ha llegado a cero
+            Debug.Log("El Slider ha llegado a cero.");
+            SceneManager.LoadScene("Scores");
+
+            // Puedes poner aquí el código que quieras ejecutar cuando el Slider llega a cero
+        }
+    }
 }

@@ -17,6 +17,9 @@ public class JefeEnemigo : MonoBehaviour
     private float tiempoDesdeUltimaGeneracion = 0f;
     public float distanciaMaximaParaContador = 2.0f;
 
+    // Variable para controlar la dirección del jefe
+    private int direccion = 1; // 1 para derecha, -1 para izquierda
+
     void Start()
     {
         jugador = GameObject.FindGameObjectWithTag("Player").transform;
@@ -24,7 +27,6 @@ public class JefeEnemigo : MonoBehaviour
 
     void Update()
     {
- 
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
         if (distanciaAlJugador < distanciaDeAccion)
@@ -34,6 +36,19 @@ public class JefeEnemigo : MonoBehaviour
 
             // Mueve al jefe hacia el punto de destino
             transform.position = Vector2.MoveTowards(transform.position, destino, velocidadMovimiento * Time.deltaTime);
+
+            // Verificar y actualizar la dirección del jefe
+            if (transform.position.x < destino.x)
+            {
+                direccion = 1; // Mover a la derecha
+            }
+            else
+            {
+                direccion = -1; // Mover a la izquierda
+            }
+
+            // Reflejar el sprite horizontalmente según la dirección
+            transform.localScale = new Vector3(direccion, 1, 1);
 
             tiempoDesdeUltimaGeneracion += Time.deltaTime;
 
