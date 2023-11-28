@@ -24027,8 +24027,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Restart
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
-  m_sharedMaterial: {fileID: -6132189683253504093, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24174,8 +24174,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
-  m_sharedMaterial: {fileID: -6132189683253504093, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24199,7 +24199,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 44.75
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -24710,9 +24710,9 @@ MonoBehaviour:
     m_Bits: 1
   contadorGolpes: 0
   distanciaMaximaParaContador: 1
-  puntaje: {fileID: 228101006}
   empuje: -1
   n_vel: 2
+  objeto_curativo: {fileID: 0}
 --- !u!1 &374013111
 GameObject:
   m_ObjectHideFlags: 0
@@ -26893,8 +26893,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
-  m_sharedMaterial: {fileID: -6132189683253504093, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -27595,8 +27595,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
-  m_sharedMaterial: {fileID: -6132189683253504093, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29681,8 +29681,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'SCORE:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
-  m_sharedMaterial: {fileID: -6132189683253504093, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29706,7 +29706,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 44.75
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1

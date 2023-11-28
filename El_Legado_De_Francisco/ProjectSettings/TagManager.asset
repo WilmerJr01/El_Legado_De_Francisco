@@ -11,6 +11,7 @@ TagManager:
   - capaMinienemigo
   - JefeEnemigo
   - Cuadrado
+  - Cura
   layers:
   - Default
   - TransparentFX

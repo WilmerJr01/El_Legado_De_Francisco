@@ -13,6 +13,8 @@ public class JugadorScript : MonoBehaviour
     public int empuje = -3;
     public float n_vel = 2;
 
+    public Objeto_curacion objeto_curativo;
+
     void Update()
     {
         // Obtiene la dirección del jugador según la entrada de teclado
@@ -110,6 +112,8 @@ public class JugadorScript : MonoBehaviour
                     //SceneManager.LoadScene("Score");
                 }
             }
+        }else if (collision.CompareTag("Cura")){
+        
         }
     }
 
