@@ -283,8 +283,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -110}
-  m_SizeDelta: {x: -40, y: -220}
+  m_AnchoredPosition: {x: 0, y: -425}
+  m_SizeDelta: {x: -40, y: -850}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &102807300
 MonoBehaviour:
@@ -338,8 +338,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextDialogo: {fileID: 1797035114}
   lineas:
-  - Hola, soy Francisco
-  - Hola
+  - "Hace a\xF1os atras, en Colombia existi\xF3 un hombre llamada Francisco"
+  - El era un juglar e iba de pueblo en pueblo tocando vallenato
+  - Sin embargo, era un tipo valiente y salia por las noches sin temor
+  - En esas salidas se encontraba y luchaba con monstruos
+  - Hoy son llamados leyendas y ahora reviviran sus aventuras
+  - 'Entra a la cantina, para moverte usa las teclas WASD o las flechas '
   textSpeed: 0.1
 --- !u!1 &266320997
 GameObject:
@@ -1232,8 +1236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 268, y: -41}
-  m_SizeDelta: {x: 200, y: 20}
+  m_AnchoredPosition: {x: 774, y: -78}
+  m_SizeDelta: {x: 400, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135956682
 MonoBehaviour:
@@ -1255,10 +1259,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Haz Click Izquiero para continuar
+  m_text: HAZ CLICK IZQUIERDO PARA COTINUAR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
+  m_sharedMaterial: {fileID: -6132189683253504093, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1282,8 +1286,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -25194,8 +25198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.2, y: 23.7}
-  m_SizeDelta: {x: 680, y: 50}
+  m_AnchoredPosition: {x: 1, y: 25}
+  m_SizeDelta: {x: 1700, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797035114
 MonoBehaviour:
@@ -25219,8 +25223,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
+  m_sharedMaterial: {fileID: -6132189683253504093, guid: aaae61d36a6a0e44794fb7436aef6ef8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25244,8 +25248,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -25280,7 +25284,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -50.771484, w: 0}
+  m_margin: {x: 0, y: 0, z: -50.771484, w: -1.7617493}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
