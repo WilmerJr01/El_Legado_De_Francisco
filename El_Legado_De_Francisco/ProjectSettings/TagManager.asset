@@ -10,6 +10,7 @@ TagManager:
   - Obstacle
   - capaMinienemigo
   - JefeEnemigo
+  - Cuadrado
   layers:
   - Default
   - TransparentFX
