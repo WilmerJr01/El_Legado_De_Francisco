@@ -26,4 +26,8 @@ public class ControladorVidas : MonoBehaviour
         string puntosSalida=cantidadVidas.ToString("0");
         return puntosSalida;
     }
+
+    public void cambiarVidas(){
+        cantidadVidas += 1;
+    }
 }
