@@ -597,7 +597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dc1a203f893c543ae3f2b28638bdf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rutaArchivoJSON: C:\Users\WILME\Desktop\El Legado De Francisco\El_Legado_De_Francisco\El_Legado_De_Francisco\Assets\Score.json
   marcadoresTextNombre: {fileID: 806657729}
   marcadoresTextPuntos: {fileID: 1431053733}
 --- !u!1 &759560291

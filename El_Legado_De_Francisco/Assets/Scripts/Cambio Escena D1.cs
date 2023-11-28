@@ -11,7 +11,7 @@ public class CambioEscenaD1 : MonoBehaviour
         if (other.CompareTag("Cuadrado"))
         {
             // Cambia a la escena especificada
-            SceneManager.LoadScene("Escena #2");
+            SceneManager.LoadScene(2);
         }
     }
 

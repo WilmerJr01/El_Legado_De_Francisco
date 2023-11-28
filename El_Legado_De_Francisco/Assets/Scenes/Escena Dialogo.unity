@@ -343,7 +343,8 @@ MonoBehaviour:
   - Sin embargo, era un tipo valiente y salia por las noches sin temor
   - En esas salidas se encontraba y luchaba con monstruos
   - Hoy son llamados leyendas y ahora reviviran sus aventuras
-  - 'Entra a la cantina, para moverte usa las teclas WASD o las flechas '
+  - "Entra a la cantina para dar un peque\xF1o concierto, usa el WASD o las flechas
+    para moverte."
   textSpeed: 0.1
 --- !u!1 &266320997
 GameObject:

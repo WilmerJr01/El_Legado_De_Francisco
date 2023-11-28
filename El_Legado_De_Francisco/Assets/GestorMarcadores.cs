@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using System.IO;
+using UnityEngine.SocialPlatforms.Impl;
 
 [System.Serializable]
 public class Row
@@ -20,7 +22,6 @@ public class ContenedorFilas
 
 public class GestorMarcadores : MonoBehaviour
 {
-    public string rutaArchivoJSON;
      
     public  TextMeshProUGUI marcadoresTextNombre; // Asigna un objeto Text en el Inspector.
     public  TextMeshProUGUI marcadoresTextPuntos; // Asigna un objeto Text en el Inspector.
@@ -29,7 +30,7 @@ public class GestorMarcadores : MonoBehaviour
     {
         try
         {
-            string contenidoJSON = System.IO.File.ReadAllText(rutaArchivoJSON);
+            string contenidoJSON = System.IO.File.ReadAllText(Path.GetFullPath("Assets/Score.json"));
 
             // Deserializa el JSON usando JsonUtility
             ContenedorFilas contenedor = new ContenedorFilas();

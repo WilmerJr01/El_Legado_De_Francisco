@@ -11,7 +11,6 @@ public class Panel_Manager2 : MonoBehaviour
 
     // Ruta del archivo JSON
     public TMP_InputField inputField;
-    public string rutaArchivoJSON = "C:/Users/WILME/Desktop/El Legado De Francisco/El_Legado_De_Francisco/El_Legado_De_Francisco/Assets/Score.json";
 
 
     [System.Serializable]
@@ -61,10 +60,10 @@ public class Panel_Manager2 : MonoBehaviour
     ContenedorFilas CargarRegistros()
     {
         // Verificar si el archivo JSON existe
-        if (File.Exists(rutaArchivoJSON))
+        if (File.Exists(Path.GetFullPath("Assets/Score.json")))
         {
             // Leer el contenido del archivo JSON
-            string contenidoJSON = File.ReadAllText(rutaArchivoJSON);
+            string contenidoJSON = File.ReadAllText(Path.GetFullPath("Assets/Score.json"));
 
             // Deserializar el contenido a un objeto ContenedorFilas
             ContenedorFilas contenedor = JsonUtility.FromJson<ContenedorFilas>(contenidoJSON);
@@ -84,7 +83,7 @@ public class Panel_Manager2 : MonoBehaviour
         string jsonContenedor = JsonUtility.ToJson(contenedor);
 
         // Escribir el JSON en el archivo
-        File.WriteAllText(rutaArchivoJSON, jsonContenedor);
+        File.WriteAllText(Path.GetFullPath("Assets/Score.json"), jsonContenedor);
     }
     public void play_button()
     {

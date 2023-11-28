@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 1391488234}
-  rutaArchivoJSON: C:/Users/WILME/Desktop/El Legado De Francisco/El_Legado_De_Francisco/El_Legado_De_Francisco/Assets/Score.json
+  rutaArchivoJSON: Assets\Score.json
 --- !u!1 &1013670716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1084636937
 RectTransform:
   m_ObjectHideFlags: 0
