@@ -12,6 +12,7 @@ TagManager:
   - JefeEnemigo
   - Cuadrado
   - Cura
+  - Diablo
   layers:
   - Default
   - TransparentFX
@@ -63,4 +64,7 @@ TagManager:
     locked: 0
   - name: capaJefeEnemigo
     uniqueID: 1838987781
+    locked: 0
+  - name: proyectil
+    uniqueID: 2029151117
     locked: 0
