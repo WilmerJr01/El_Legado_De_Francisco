@@ -16,7 +16,7 @@ public class panel_manager : MonoBehaviour
     }
     public void scores_button() //Esto solo va a funcionar cuando descarguemos el juego, entonces mejor que tire algo por consola a ver si si funciona lol
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
     public void back_button()
     {

@@ -9,10 +9,9 @@ public class JugadorScript : MonoBehaviour
     public LayerMask capaMinienemigo;
     public int contadorGolpes;
     public float distanciaMaximaParaContador = 2.0f;
-    [SerializeField] private PuntajeJugador puntaje;
 
-    public int empuje=-3;
-    public float n_vel=2;
+    public int empuje = -3;
+    public float n_vel = 2;
 
     void Update()
     {
@@ -35,7 +34,7 @@ public class JugadorScript : MonoBehaviour
             foreach (Collider2D minienemigoCollider in minienemigos)
             {
                 MinienemigoScript minienemigo = minienemigoCollider.GetComponent<MinienemigoScript>();
-                
+
                 if (minienemigo != null)
                 {
                     // Obtiene la dirección hacia el minienemigo
@@ -53,7 +52,7 @@ public class JugadorScript : MonoBehaviour
                     {
                         // Elimina el minienemigo
                         Destroy(minienemigo.gameObject);
-                        puntaje.SumarPuntos(10f); //Puntos del jugador al matar un minienemigo
+                        ControladorPuntos.Instance.SumarPuntos(10f); //Puntos del jugador al matar un minienemigo
                     }
                 }
             }
@@ -81,10 +80,11 @@ public class JugadorScript : MonoBehaviour
                 GameObject jefe = GameObject.FindGameObjectWithTag("JefeEnemigo");
                 JefeEnemigo jefe1 = jefe.GetComponent<JefeEnemigo>();
 
-                if(contadorGolpes%2 == 0 && contadorGolpes!=0){
-                    jefe1.velocidadMovimiento+=0.1f;
+                if (contadorGolpes % 2 == 0 && contadorGolpes != 0)
+                {
+                    jefe1.velocidadMovimiento += 0.1f;
                     n_vel = jefe1.velocidadMovimiento;
-                    jefe1.tiempoEntreGeneraciones-=0.1f;
+                    jefe1.tiempoEntreGeneraciones -= 0.1f;
                 }
 
 
@@ -103,7 +103,8 @@ public class JugadorScript : MonoBehaviour
                 if (contadorGolpes == 20)
                 {
                     Destroy(collision.gameObject);
-                        puntaje.SumarPuntos(100f);
+                    ControladorPuntos.Instance.SumarPuntos(100f); //Puntos del jugador al matar un minienemigo
+
 
                     //Cambiarde escena 
                     //SceneManager.LoadScene("Score");
@@ -134,8 +135,8 @@ public class JugadorScript : MonoBehaviour
         if (jefe != null)
         {
             JefeEnemigo jefe1 = jefe.GetComponent<JefeEnemigo>();
-            jefe1.velocidadMovimiento+=2;
-            
+            jefe1.velocidadMovimiento += 2;
+
             Invoke("restaurarEnemigo", 1f);
         }
 
@@ -147,29 +148,29 @@ public class JugadorScript : MonoBehaviour
         {
             JefeEnemigo jefe1 = jefe.GetComponent<JefeEnemigo>();
             jefe1.velocidadMovimiento = n_vel;
-           
+
         }
     }
-     public void Retroceder()
+    public void Retroceder()
     {
         // Puedes ajustar la fuerza de retroceso según tus necesidades
         Transform miTransform = transform;
 
-        miTransform.Translate(Vector3.right*empuje*Time.deltaTime,Space.World);
-       
+        miTransform.Translate(Vector3.right * empuje * Time.deltaTime, Space.World);
+
     }
 
-   public void CambiarColorJugador(Color color)
-{
-    SpriteRenderer jugadorSpriteRenderer = GetComponent<SpriteRenderer>();
-    if (jugadorSpriteRenderer != null)
+    public void CambiarColorJugador(Color color)
     {
-        jugadorSpriteRenderer.color = color;
+        SpriteRenderer jugadorSpriteRenderer = GetComponent<SpriteRenderer>();
+        if (jugadorSpriteRenderer != null)
+        {
+            jugadorSpriteRenderer.color = color;
 
-        // Inicia un temporizador para cambiar de nuevo el color después de 1 segundo
-        StartCoroutine(AlternarColor());
+            // Inicia un temporizador para cambiar de nuevo el color después de 1 segundo
+            StartCoroutine(AlternarColor());
+        }
     }
-}
 
     // Función para alternar el color del jugador
     IEnumerator AlternarColor()

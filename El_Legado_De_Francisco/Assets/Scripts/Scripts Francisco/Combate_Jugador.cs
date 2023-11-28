@@ -23,7 +23,7 @@ public class Combate_Jugador : MonoBehaviour
         barraDeVida.CambiarVidaActual(vida);
         if(vida <= 0){
             Destroy(gameObject);
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
 
     }

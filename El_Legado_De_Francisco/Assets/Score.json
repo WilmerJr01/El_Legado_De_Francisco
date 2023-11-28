@@ -1,7 +1,1 @@
-{
-    "filas": [
-        {"nombre": "ABC", "puntuacion": 1000},
-        {"nombre": "YJC", "puntuacion": 9999},
-        {"nombre": "OPP", "puntuacion": 120}
-    ]
-}
+{"filas":[{"nombre":"ABC","puntuacion":1000},{"nombre":"YJC","puntuacion":9999},{"nombre":"OPP","puntuacion":120},{"nombre":"WIL","puntuacion":60}]}

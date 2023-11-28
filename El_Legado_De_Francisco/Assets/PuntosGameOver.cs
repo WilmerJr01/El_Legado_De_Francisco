@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PuntajeJugador : MonoBehaviour
+public class PuntosGameOver : MonoBehaviour
 {
     private TextMeshProUGUI textMesh;
 
     private void Start(){
         textMesh = GetComponent<TextMeshProUGUI>();
-    }
-
-    private void Update(){
         textMesh.text = ControladorPuntos.Instance.setPuntos();
     }
-
 }
