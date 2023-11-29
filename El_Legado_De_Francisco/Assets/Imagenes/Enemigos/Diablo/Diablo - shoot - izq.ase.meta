@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 959ca9ca8c6f9df4d8925aab2d0405d6
+guid: 5994110614ce81341b364ba2c0361d89
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 20
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638367842248678892
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: patasola_derecha_Frame_0
+  - name: Diablo - shoot - izq_Frame_0
     originalName: 
-    pivot: {x: 0.52, y: 0.52}
+    pivot: {x: 0.3846154, y: -0.023255816}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 74
-      y: 4
-      width: 27
-      height: 42
-    spriteID: f7799bb99712ab64093310254661fafb
+      x: 51
+      y: 56
+      width: 39
+      height: 43
+    spriteID: 6e61c9347b4a0884d81bd868a90a8c9f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,19 +138,39 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 74, y: 4}
-  - name: patasola_derecha_Frame_1
+    uvTransform: {x: 51, y: 56}
+  - name: Diablo - shoot - izq_Frame_1
     originalName: 
-    pivot: {x: 0.52, y: 0.52}
+    pivot: {x: 0.3846154, y: -0.022727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 4
+      width: 39
+      height: 44
+    spriteID: 5769b2f63a59b4741a1b165dc5a0d684
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 4}
+  - name: Diablo - shoot - izq_Frame_2
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 27
-      height: 43
-    spriteID: d4204972084b1af4681cf57ec56e0754
+      width: 39
+      height: 45
+    spriteID: 72ad2b7b1bb74364daba33269a869c61
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,38 +179,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: patasola_derecha_Frame_2
+  - name: Diablo - shoot - izq_Frame_3
     originalName: 
-    pivot: {x: 0.52, y: 0.52}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 39
-      y: 4
-      width: 27
-      height: 43
-    spriteID: 235d15bdce6aed44d8ecf5c97d0d8e4c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 39, y: 4}
-  - name: patasola_derecha_Frame_3
-    originalName: 
-    pivot: {x: 0.52, y: 0.52}
+    pivot: {x: 0.3846154, y: -0.022222225}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 55
-      width: 27
-      height: 42
-    spriteID: 979eaa16cca7dba4c918b5cc47df8c32
+      y: 57
+      width: 39
+      height: 45
+    spriteID: b90003a3d95c7474a978fa1a4ed598cc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,99 +198,107 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 55}
+    uvTransform: {x: 4, y: 57}
+  - name: Diablo - shoot - izq_Frame_4
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 110
+      width: 39
+      height: 45
+    spriteID: 3323dc9f335348a44ab571f81e5f9de6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 110}
+  - name: Diablo - shoot - izq_Frame_5
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 163
+      width: 39
+      height: 45
+    spriteID: 63837bf6bccfb524994005117e8caf36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 163}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1312764652
-    name: patasola_derecha
+    guid: 644496014
+    name: Diablo - shoot - izq
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: patasola_derecha_Frame_0
+    - name: Diablo - shoot - izq_Frame_0
       frameIndex: 0
       cellRect:
-        x: 13
-        y: 3
-        width: 27
-        height: 42
-      spriteId: f7799bb99712ab64093310254661fafb
-    - name: patasola_derecha_Frame_1
+        x: 9
+        y: 1
+        width: 39
+        height: 43
+      spriteId: 6e61c9347b4a0884d81bd868a90a8c9f
+    - name: Diablo - shoot - izq_Frame_1
       frameIndex: 1
       cellRect:
-        x: 13
+        x: 9
         y: 1
-        width: 27
-        height: 43
-      spriteId: d4204972084b1af4681cf57ec56e0754
-    - name: patasola_derecha_Frame_2
+        width: 39
+        height: 44
+      spriteId: 5769b2f63a59b4741a1b165dc5a0d684
+    - name: Diablo - shoot - izq_Frame_2
       frameIndex: 2
       cellRect:
-        x: 13
+        x: 9
         y: 1
-        width: 27
-        height: 43
-      spriteId: 235d15bdce6aed44d8ecf5c97d0d8e4c
-    - name: patasola_derecha_Frame_3
+        width: 39
+        height: 45
+      spriteId: 72ad2b7b1bb74364daba33269a869c61
+    - name: Diablo - shoot - izq_Frame_3
       frameIndex: 3
       cellRect:
-        x: 13
-        y: 3
-        width: 27
-        height: 42
-      spriteId: 979eaa16cca7dba4c918b5cc47df8c32
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: b90003a3d95c7474a978fa1a4ed598cc
+    - name: Diablo - shoot - izq_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: 3323dc9f335348a44ab571f81e5f9de6
+    - name: Diablo - shoot - izq_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: 63837bf6bccfb524994005117e8caf36
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: WebGL
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}

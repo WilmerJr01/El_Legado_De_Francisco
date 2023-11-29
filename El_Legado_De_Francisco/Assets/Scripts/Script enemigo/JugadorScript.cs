@@ -8,10 +8,17 @@ public class JugadorScript : MonoBehaviour
     public float distanciaAtaque = 1f;
     public LayerMask capaMinienemigo;
     public int contadorGolpes;
+
+    public int contarDiablo = 0;
     public float distanciaMaximaParaContador = 2.0f;
 
     public int empuje = -3;
     public float n_vel = 2;
+
+    public Objeto_curacion objeto_curativo;
+
+    private Vector3 posicionGuardada;
+    public GameObject objetoPrefab;
 
     void Update()
     {
@@ -65,6 +72,7 @@ public class JugadorScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        float distanciaAlDiablo = Vector2.Distance(transform.position, collision.transform.position);
         if (collision.CompareTag("JefeEnemigo"))
         {
             // Verifica la distancia al jugador antes de contar el golpe
@@ -100,7 +108,7 @@ public class JugadorScript : MonoBehaviour
                 // Imprime el contador en la consola
                 Debug.Log("Golpe al JefeEnemigo. Contador: " + contadorGolpes);
 
-                if (contadorGolpes == 20)
+                if (contadorGolpes >= 20)
                 {
                     Destroy(collision.gameObject);
                     ControladorPuntos.Instance.SumarPuntos(100f); //Puntos del jugador al matar un minienemigo
@@ -109,6 +117,39 @@ public class JugadorScript : MonoBehaviour
                     //Cambiarde escena 
                     //SceneManager.LoadScene("Score");
                 }
+            }
+        }
+        else if (collision.CompareTag("mata") && Input.GetKey(KeyCode.P))
+        {
+
+            posicionGuardada = collision.transform.position;
+
+            // Eliminar el objeto original con el tag "mata"
+            Destroy(collision.gameObject);
+
+            // Clonar un nuevo objeto y establecer su posición
+            GameObject nuevoObjeto = Instantiate(objetoPrefab, posicionGuardada, Quaternion.identity);
+
+            // También puedes hacer otras acciones con el nuevo objeto clonado
+            Debug.Log("Nuevo objeto clonado en la posición: " + posicionGuardada);
+
+        }
+        else if (collision.CompareTag("Diablo") && Input.GetKey(KeyCode.P))
+        {
+            contarDiablo += 1;
+
+            //
+            GameObject objplayer = GameObject.FindGameObjectWithTag("Diablo");
+            Diablo diablo = objplayer.GetComponent<Diablo>();
+            Color morado = new Color(0.5f, 0f, 0.5f, 1f);
+            diablo.CambiarColorDiablo(morado);
+
+
+            Debug.Log(contarDiablo);
+            if (contarDiablo >= 20)
+            {
+                Destroy(collision.gameObject);
+                ControladorPuntos.Instance.SumarPuntos(100f);
             }
         }
     }
@@ -175,7 +216,7 @@ public class JugadorScript : MonoBehaviour
     // Función para alternar el color del jugador
     IEnumerator AlternarColor()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
 
         // Cambia el color del jugador a blanco
         CambiarColorJugador(Color.white);

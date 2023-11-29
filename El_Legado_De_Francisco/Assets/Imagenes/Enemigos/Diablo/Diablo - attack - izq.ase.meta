@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: e4186aa6d7abf8c468fd530974bf7376
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Diablo - attack - izq_Frame_0
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.023255816}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 145
+      y: 110
+      width: 39
+      height: 43
+    spriteID: 78a1f8997a464b841934b5a4234da429
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 145, y: 110}
+  - name: Diablo - attack - izq_Frame_1
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 110
+      width: 39
+      height: 44
+    spriteID: bc659513c6726f04fbf88a58342efe2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 110}
+  - name: Diablo - attack - izq_Frame_2
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 57
+      width: 39
+      height: 45
+    spriteID: ed503e933b9b3ac429a0a2f4968761cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 57}
+  - name: Diablo - attack - izq_Frame_3
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 57
+      width: 39
+      height: 45
+    spriteID: 7fa35695e1f037a49aa1cd98245e53f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 57}
+  - name: Diablo - attack - izq_Frame_4
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 149
+      y: 57
+      width: 39
+      height: 45
+    spriteID: a4e9d5a71b2a6634c9ffc6edf55e332c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 149, y: 57}
+  - name: Diablo - attack - izq_Frame_5
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 57
+      width: 39
+      height: 45
+    spriteID: 6358a28b635d02a43848c0a3fe9774c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 57}
+  - name: Diablo - attack - izq_Frame_6
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 110
+      width: 39
+      height: 45
+    spriteID: ac111f6898f6c204b882d5360ff44d61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 110}
+  - name: Diablo - attack - izq_Frame_7
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 110
+      width: 39
+      height: 45
+    spriteID: 69ff1bb79dc9a7b45ab5b8aadfd77cc3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 110}
+  - name: Diablo - attack - izq_Frame_8
+    originalName: 
+    pivot: {x: 0.4418605, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 57
+      width: 43
+      height: 45
+    spriteID: 5a46fe7ca4bd34246887458adf58c972
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 57}
+  - name: Diablo - attack - izq_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 48
+      height: 45
+    spriteID: a9263a61a1d278c46943ec46f700917d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Diablo - attack - izq_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 4
+      width: 48
+      height: 45
+    spriteID: 59ad668ef3cacd141b5f8d97eda681b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 4}
+  - name: Diablo - attack - izq_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 4
+      width: 48
+      height: 45
+    spriteID: 889c52418b2d5de4a90bb17e2df2436f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 116, y: 4}
+  - name: Diablo - attack - izq_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.022222225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 172
+      y: 4
+      width: 48
+      height: 45
+    spriteID: 793d837cbf9c4364fa88e764812b48a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 172, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1080401371
+    name: Diablo - attack - izq
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Diablo - attack - izq_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 43
+      spriteId: 78a1f8997a464b841934b5a4234da429
+    - name: Diablo - attack - izq_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 44
+      spriteId: bc659513c6726f04fbf88a58342efe2b
+    - name: Diablo - attack - izq_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: ed503e933b9b3ac429a0a2f4968761cd
+    - name: Diablo - attack - izq_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: 7fa35695e1f037a49aa1cd98245e53f2
+    - name: Diablo - attack - izq_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: a4e9d5a71b2a6634c9ffc6edf55e332c
+    - name: Diablo - attack - izq_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: 6358a28b635d02a43848c0a3fe9774c9
+    - name: Diablo - attack - izq_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: ac111f6898f6c204b882d5360ff44d61
+    - name: Diablo - attack - izq_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 9
+        y: 1
+        width: 39
+        height: 45
+      spriteId: 69ff1bb79dc9a7b45ab5b8aadfd77cc3
+    - name: Diablo - attack - izq_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 5
+        y: 1
+        width: 43
+        height: 45
+      spriteId: 5a46fe7ca4bd34246887458adf58c972
+    - name: Diablo - attack - izq_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 1
+        width: 48
+        height: 45
+      spriteId: a9263a61a1d278c46943ec46f700917d
+    - name: Diablo - attack - izq_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 1
+        width: 48
+        height: 45
+      spriteId: 59ad668ef3cacd141b5f8d97eda681b5
+    - name: Diablo - attack - izq_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 1
+        width: 48
+        height: 45
+      spriteId: 889c52418b2d5de4a90bb17e2df2436f
+    - name: Diablo - attack - izq_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 1
+        width: 48
+        height: 45
+      spriteId: 793d837cbf9c4364fa88e764812b48a6
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 48, y: 48}

@@ -16,6 +16,7 @@ public class ControladorPuntos : MonoBehaviour
         }
     }
 
+    
     public void SumarPuntos(float puntos){
 
         cantidadPuntos +=puntos;

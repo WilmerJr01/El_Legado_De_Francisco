@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 227033200cb6e12428145b93e1107c07
+guid: afde92ece1a015649a1b61b6eea7f376
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 32
+    spritePixelsToUnits: 20
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638367752490333542
+  platformSettingsDirtyTick: 638368043588486129
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: "pe\xF1on1"
+  - name: Diablo - izq_Frame_0
     originalName: 
-    pivot: {x: 0.8571429, y: -2.4545455}
+    pivot: {x: 0.34, y: 0.47}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 21
-      height: 11
-    spriteID: 019522fabfad15947bf4b4cb3fec6d41
+      width: 39
+      height: 45
+    spriteID: 620e684cc6c06074ab9f662726d58b97
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,23 +139,107 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Diablo - izq_Frame_1
+    originalName: 
+    pivot: {x: 0.34, y: 0.47}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 57
+      width: 38
+      height: 46
+    spriteID: dd3d8bdffcde01d428d962274e34a32e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 57}
+  - name: Diablo - izq_Frame_2
+    originalName: 
+    pivot: {x: 0.34, y: 0.47}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 4
+      width: 39
+      height: 45
+    spriteID: c3b78f3c86f813f41921de62d3d08046
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 4}
+  - name: Diablo - izq_Frame_3
+    originalName: 
+    pivot: {x: 0.34, y: 0.47}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 57
+      width: 38
+      height: 46
+    spriteID: a2e7e5a83a0f2d54fa3ca3f44e920534
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 57}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -75360800
-    name: "pe\xF1on1"
+    guid: 423986034
+    name: Diablo - izq
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: "pe\xF1on1"
+    - name: Diablo - izq_Frame_0
       frameIndex: 0
       cellRect:
-        x: 6
-        y: 27
-        width: 21
-        height: 11
-      spriteId: 019522fabfad15947bf4b4cb3fec6d41
+        x: 7
+        y: 1
+        width: 39
+        height: 45
+      spriteId: 620e684cc6c06074ab9f662726d58b97
+    - name: Diablo - izq_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 5
+        y: 1
+        width: 38
+        height: 46
+      spriteId: dd3d8bdffcde01d428d962274e34a32e
+    - name: Diablo - izq_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 2
+        y: 1
+        width: 39
+        height: 45
+      spriteId: c3b78f3c86f813f41921de62d3d08046
+    - name: Diablo - izq_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 5
+        y: 1
+        width: 38
+        height: 46
+      spriteId: a2e7e5a83a0f2d54fa3ca3f44e920534
     linkedCells: []
     parentIndex: -1
   platformSettings:
