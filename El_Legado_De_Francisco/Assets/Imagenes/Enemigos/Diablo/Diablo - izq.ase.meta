@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638368043588486129
+  platformSettingsDirtyTick: 638368135721127652
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Diablo - izq_Frame_0
     originalName: 
-    pivot: {x: 0.34, y: 0.47}
+    pivot: {x: 0.34484938, y: 0.49941957}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -141,7 +141,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Diablo - izq_Frame_1
     originalName: 
-    pivot: {x: 0.34, y: 0.47}
+    pivot: {x: 0.39972392, y: 0.4741118}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -161,7 +161,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 57}
   - name: Diablo - izq_Frame_2
     originalName: 
-    pivot: {x: 0.34, y: 0.47}
+    pivot: {x: 0.46608382, y: 0.4952168}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -181,7 +181,7 @@ ScriptedImporter:
     uvTransform: {x: 51, y: 4}
   - name: Diablo - izq_Frame_3
     originalName: 
-    pivot: {x: 0.34, y: 0.47}
+    pivot: {x: 0.42460895, y: 0.48233464}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -280,6 +280,18 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
