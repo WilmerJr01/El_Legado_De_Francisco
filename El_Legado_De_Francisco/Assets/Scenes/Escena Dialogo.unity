@@ -338,11 +338,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextDialogo: {fileID: 1797035114}
   lineas:
-  - "Hace a\xF1os atras, en Colombia existi\xF3 un hombre llamada Francisco"
-  - El era un juglar e iba de pueblo en pueblo tocando vallenato
-  - Sin embargo, era un tipo valiente y salia por las noches sin temor
-  - En esas salidas se encontraba y luchaba con monstruos
-  - Hoy son llamados leyendas y ahora reviviran sus aventuras
+  - Colombia esta llena de mitos y leyendas. Esta es una de ellas, su nombre es Francisco,
+    Francisco el hombre.
+  - Francisco es un juglar vallenato, va de pueblo en pueblo con su acordeon tocando
+    melodias para alegrar el alma de quien las escuche.
+  - "Actualmente se encuentra en un peque\xF1o pueblo del Tolima "
   - "Entra a la cantina para dar un peque\xF1o concierto, usa el WASD o las flechas
     para moverte."
   textSpeed: 0.1
@@ -864,9 +864,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   contadorGolpes: 0
+  contarDiablo: 0
   distanciaMaximaParaContador: 1
   empuje: -1
   n_vel: 2
+  objeto_curativo: {fileID: 0}
+  objetoPrefab: {fileID: 0}
 --- !u!114 &859587383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,6 +885,7 @@ MonoBehaviour:
   vida: 0
   maximoVida: 100
   barraDeVida: {fileID: 0}
+  vidasRestantes: {fileID: 0}
 --- !u!114 &859587384
 MonoBehaviour:
   m_ObjectHideFlags: 0
