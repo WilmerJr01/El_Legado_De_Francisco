@@ -37,6 +37,9 @@ public class Combate_Jugador : MonoBehaviour
                 {
                     vidasRestantes.SetActive(true);
                     Invoke("RecargarEscena", 3f);
+                    GameObject objplayer = GameObject.FindGameObjectWithTag("Player");
+                    JugadorScript player = objplayer.GetComponent<JugadorScript>();
+                    player.contadorGolpes = 0;
                 }
                 else
                 {

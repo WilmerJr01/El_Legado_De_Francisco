@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c6d5ae180d2d9d947817d470d04e540f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72acd99afbd71664b947e263c244d795, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -588,6 +588,7 @@ MonoBehaviour:
     su alma al diablo.
   - "Francisco sin vacilar, y como todo un juglar, acept\xF3 el reto, y se prepar\xF3
     para su batalla contra el diablo, esta vez sin armas, solo con\_su\_instrumento."
+  - Presiona click izquierdo para pasar al nivel final.
   textSpeed: 0.1
 --- !u!114 &1587135799
 MonoBehaviour:

@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 public class cambio_escena : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float tiempolimit = 20f;
+    public float tiempolimit;
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= tiempolimit)
+        if(Time.timeSinceLevelLoad >= tiempolimit)
         {
             cambiar();
         }
+        
     }
 
     void cambiar()

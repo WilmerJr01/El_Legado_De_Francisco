@@ -90,9 +90,9 @@ public class JugadorScript : MonoBehaviour
 
                 if (contadorGolpes % 2 == 0 && contadorGolpes != 0)
                 {
-                    jefe1.velocidadMovimiento += 0.1f;
+                    jefe1.velocidadMovimiento += 0.01f;
                     n_vel = jefe1.velocidadMovimiento;
-                    jefe1.tiempoEntreGeneraciones -= 0.1f;
+                    jefe1.tiempoEntreGeneraciones -= 0.11f;
                 }
 
 
@@ -108,13 +108,13 @@ public class JugadorScript : MonoBehaviour
                 // Imprime el contador en la consola
                 Debug.Log("Golpe al JefeEnemigo. Contador: " + contadorGolpes);
 
-                if (contadorGolpes >= 20)
+                if (contadorGolpes >= 30)
                 {
                     Destroy(collision.gameObject);
                     ControladorPuntos.Instance.SumarPuntos(100f);
-                    SceneManager.LoadScene(6);
+                    Invoke("CambioEscena", 3f);
                     //Puntos del jugador al matar un minienemigo
-
+                    
 
                     //Cambiarde escena 
                     //SceneManager.LoadScene("Score");
@@ -148,7 +148,7 @@ public class JugadorScript : MonoBehaviour
 
 
             Debug.Log(contarDiablo);
-            if (contarDiablo >= 20)
+            if (contarDiablo >= 50)
             {
                 Destroy(collision.gameObject);
                 SceneManager.LoadScene(9);
@@ -179,7 +179,7 @@ public class JugadorScript : MonoBehaviour
         if (jefe != null)
         {
             JefeEnemigo jefe1 = jefe.GetComponent<JefeEnemigo>();
-            jefe1.velocidadMovimiento += 2;
+            jefe1.velocidadMovimiento += 1;
 
             Invoke("restaurarEnemigo", 1f);
         }
@@ -223,6 +223,11 @@ public class JugadorScript : MonoBehaviour
 
         // Cambia el color del jugador a blanco
         CambiarColorJugador(Color.white);
+    }
+    void CambioEscena()
+    {
+       
+        SceneManager.LoadScene(6);
     }
 
 }

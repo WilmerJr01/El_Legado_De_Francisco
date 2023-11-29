@@ -143,7 +143,7 @@ public class Diablo : MonoBehaviour
     }
     void Daño_cuerpo()
     {
-        jugador1.TomarDaño(15);
+        jugador1.TomarDaño(20);
         isAttacking = true;
         diabloAnimator.SetBool("isAttacking", isAttacking);
         GameObject objplayer = GameObject.FindGameObjectWithTag("Player");
