@@ -748,7 +748,7 @@ MonoBehaviour:
   - {fileID: 2238178086067401497, guid: beaaa56bd57b29a459c72a667ddc42a3, type: 3}
   - {fileID: 2238178086067401497, guid: d6f1c6f40ca2c984c96ca9c3eac25de9, type: 3}
   - {fileID: 2238178086067401497, guid: 0482e54e6bd6ac9479d710618ba2b2e4, type: 3}
-  TimeStart: 1.5
+  TimeStart: 1
 --- !u!1 &1862686549
 GameObject:
   m_ObjectHideFlags: 0
