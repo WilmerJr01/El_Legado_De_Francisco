@@ -24494,7 +24494,7 @@ BoxCollider2D:
   m_Offset: {x: -0.062784195, y: 0.14911318}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.34, y: 0.47}
+    pivot: {x: 0.34484938, y: 0.49941957}
     oldSize: {x: 1.95, y: 2.25}
     newSize: {x: 0.39, y: 0.45}
     adaptiveTilingThreshold: 0.5
@@ -24514,7 +24514,7 @@ Animator:
   m_GameObject: {fileID: 593214162}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 3471951232853557438, guid: afde92ece1a015649a1b61b6eea7f376, type: 3}
+  m_Controller: {fileID: 9100000, guid: 927beca85688922409c7a6386561492d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

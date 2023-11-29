@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Diablo : MonoBehaviour
@@ -23,11 +24,16 @@ public class Diablo : MonoBehaviour
     public float tiempoEntreDisparos = 1f;
 
     public bool timing = true;
+    private Animator diabloAnimator;
+    private float speed;
+    private bool isAttacking;
+
 
     void Start()
     {
         jugador = GameObject.FindGameObjectWithTag("Player").transform;
         jugador2 = GetComponent<JugadorScript>();
+        diabloAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -44,11 +50,39 @@ public class Diablo : MonoBehaviour
                 // Obtener la dirección hacia el jugador
                 Vector2 direccionAlJugador = (jugador.position - transform.position).normalized;
 
+                if (direccionAlJugador.x < 0)
+                {
+                    diabloAnimator.SetFloat("Horizontal", -1);
+                }
+                else if (direccionAlJugador.x > 0)
+                {
+                    diabloAnimator.SetFloat("Horizontal", 1);
+                }
+                else
+                {
+                    diabloAnimator.SetFloat("Horizontal", 0);
+                }
+                speed = 1;
+                if (direccionAlJugador.x != 0)
+                {
+                    if (direccionAlJugador.x < 0)
+                    {
+                        diabloAnimator.SetFloat("Vertical", -1);
+                    }
+                    else if (direccionAlJugador.x > 0)
+                    {
+                        diabloAnimator.SetFloat("Vertical", 1);
+                    }
+                }
+
                 // Verificar si el jefe está lo suficientemente lejos del jugador para moverse
                 if (distanciaAlJugador > distanciaRespetoArea)
                 {
                     // Mover al jefe hacia el jugador
                     transform.Translate(direccionAlJugador * velocidadMovimiento * Time.deltaTime);
+                    isAttacking = false;
+                    diabloAnimator.SetBool("isAttacking", isAttacking);
+                    diabloAnimator.SetFloat("Speed", speed);
                 }
 
                 // Reflejar el sprite horizontalmente según la dirección
@@ -63,8 +97,8 @@ public class Diablo : MonoBehaviour
                     if (timing)
                     {
                         timing = false;
-                        Invoke("Daño_cuerpo", 0.5f);
-                        Invoke("Actualizar_timing", 1.7f);
+                        Invoke("Daño_cuerpo", 0.8f);
+                        Invoke("Actualizar_timing", 1.31f);
                     }
 
                 }
@@ -73,6 +107,8 @@ public class Diablo : MonoBehaviour
             {
                 if (inicio)
                 {
+                    speed = 0;
+                    diabloAnimator.SetFloat("Speed", speed);
                     Invoke("ActualizarDisparos", 0.5f);
                 }
             }
@@ -83,7 +119,6 @@ public class Diablo : MonoBehaviour
     {
         // Crear un proyectil y establecer su posición inicial
         GameObject proyectil = Instantiate(proyectilPrefab, transform.position, Quaternion.identity);
-
         // Obtener la dirección hacia el jugador
         Vector2 direccionAlJugador = (jugador.position - transform.position).normalized;
 
@@ -98,6 +133,7 @@ public class Diablo : MonoBehaviour
         // Verificar si ha pasado suficiente tiempo desde el último disparo y si no hemos alcanzado el máximo de proyectiles generados
         if (Time.time - tiempoUltimoDisparo >= tiempoEntreDisparos && proyectilesGenerados < maxProyectiles)
         {
+            
             DispararProyectiles();
             // Actualizar el tiempo del último disparo
             tiempoUltimoDisparo = Time.time;
@@ -108,7 +144,8 @@ public class Diablo : MonoBehaviour
     void Daño_cuerpo()
     {
         jugador1.TomarDaño(15);
-
+        isAttacking = true;
+        diabloAnimator.SetBool("isAttacking", isAttacking);
         GameObject objplayer = GameObject.FindGameObjectWithTag("Player");
         JugadorScript player = objplayer.GetComponent<JugadorScript>();
         player.CambiarColorJugador(Color.red);
