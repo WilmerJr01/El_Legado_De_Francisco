@@ -5,6 +5,7 @@ using UnityEngine;
 public class Diablo : MonoBehaviour
 {
     public Combate_Jugador jugador1;
+    private JugadorScript jugador2;
     public float velocidadMovimiento = 5f;
     public float distanciaDeAccion = 10f;
     public float distanciaRespetoArea = 3f; // Nueva variable para la distancia de respeto
@@ -26,6 +27,7 @@ public class Diablo : MonoBehaviour
     void Start()
     {
         jugador = GameObject.FindGameObjectWithTag("Player").transform;
+        jugador2 = GetComponent<JugadorScript>();
     }
 
     void Update()
@@ -38,7 +40,7 @@ public class Diablo : MonoBehaviour
             if (distanciaAlJugador < distanciaDeAccion)
             {
                 inicio = true;
-                Debug.Log(inicio);
+
                 // Obtener la dirección hacia el jugador
                 Vector2 direccionAlJugador = (jugador.position - transform.position).normalized;
 
@@ -50,10 +52,10 @@ public class Diablo : MonoBehaviour
                 }
 
                 // Reflejar el sprite horizontalmente según la dirección
-                if (direccionAlJugador.x > 0)
-                    transform.localScale = new Vector3(1, 1, 1);
-                else
-                    transform.localScale = new Vector3(-1, 1, 1);
+               // if (direccionAlJugador.x > 0)
+                 //   transform.localScale = new Vector3(1, 1, 1);
+                //else
+                  //  transform.localScale = new Vector3(-1, 1, 1);
 
                 if (distanciaAlJugador <= distanciaRespetoArea)
                 {
@@ -61,8 +63,8 @@ public class Diablo : MonoBehaviour
                     if (timing)
                     {
                         timing = false;
-                        Invoke("Daño_cuerpo", 0.3f);
-                        Invoke("Actualizar_timing", 1f);
+                        Invoke("Daño_cuerpo", 0.5f);
+                        Invoke("Actualizar_timing", 1.7f);
                     }
 
                 }
@@ -105,12 +107,37 @@ public class Diablo : MonoBehaviour
     }
     void Daño_cuerpo()
     {
-        jugador1.TomarDaño(25);
+        jugador1.TomarDaño(15);
+
+        GameObject objplayer = GameObject.FindGameObjectWithTag("Player");
+        JugadorScript player = objplayer.GetComponent<JugadorScript>();
+        player.CambiarColorJugador(Color.red);
 
     }
     void Actualizar_timing()
     {
         timing = true;
     }
+    public void CambiarColorDiablo(Color color)
+    {
+        SpriteRenderer diablo = GetComponent<SpriteRenderer>();
+        if (diablo != null)
+        {
+            diablo.color = color;
+
+            // Inicia un temporizador para cambiar de nuevo el color después de 1 segundo
+            StartCoroutine(AlternarColor());
+        }
+    }
+
+    // Función para alternar el color del jugador
+    IEnumerator AlternarColor()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        // Cambia el color del jugador a blanco
+        CambiarColorDiablo(Color.white);
+    }
+
 }
 

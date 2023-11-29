@@ -14,7 +14,6 @@ public class MenuRestaurar : MonoBehaviour
     void Update()
     {
         inputField1.text = ControladorVidas.Instance.setVidas();
-        Debug.Log(inputField1);
         inputField2.text = ControladorPuntos.Instance.setPuntos();
     }
 }
