@@ -24,6 +24,7 @@ public class Inventario : MonoBehaviour
 
                 // Desactivar el objeto Coleccionable del mapa
                 coll.gameObject.SetActive(false);
+                ControladorPuntos.Instance.SumarPuntos(5f);
                 // Opcional: Destruir el objeto si no se va a utilizar más.
                 // Destroy(coll.gameObject);
 

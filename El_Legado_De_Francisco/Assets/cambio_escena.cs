@@ -18,6 +18,6 @@ public class cambio_escena : MonoBehaviour
 
     void cambiar()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(7);
     }
 }

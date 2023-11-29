@@ -18,9 +18,9 @@ public class JugadorDiablo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (puntaje == 5)
+        if (puntaje == 40)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(10);
         }
     }
 }

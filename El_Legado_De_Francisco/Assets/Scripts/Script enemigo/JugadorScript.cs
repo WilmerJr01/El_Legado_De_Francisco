@@ -111,7 +111,9 @@ public class JugadorScript : MonoBehaviour
                 if (contadorGolpes >= 20)
                 {
                     Destroy(collision.gameObject);
-                    ControladorPuntos.Instance.SumarPuntos(100f); //Puntos del jugador al matar un minienemigo
+                    ControladorPuntos.Instance.SumarPuntos(100f);
+                    SceneManager.LoadScene(6);
+                    //Puntos del jugador al matar un minienemigo
 
 
                     //Cambiarde escena 
@@ -149,6 +151,7 @@ public class JugadorScript : MonoBehaviour
             if (contarDiablo >= 20)
             {
                 Destroy(collision.gameObject);
+                SceneManager.LoadScene(9);
                 ControladorPuntos.Instance.SumarPuntos(100f);
             }
         }
@@ -222,7 +225,6 @@ public class JugadorScript : MonoBehaviour
         CambiarColorJugador(Color.white);
     }
 
-    // ... (resto de tu código)
 }
 
 

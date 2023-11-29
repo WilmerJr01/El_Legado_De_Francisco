@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRb;
     private Vector2 moveInput;
     private Animator playerAnimator;
+    
 
     void Start()
     {

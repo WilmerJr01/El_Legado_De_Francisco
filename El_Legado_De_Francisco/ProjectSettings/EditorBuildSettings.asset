@@ -26,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scores.unity
     guid: f5d277c78969082448b77b4e8d16d2d0
+  - enabled: 1
+    path: Assets/Scenes/Pantalla_carga.unity
+    guid: b83bc7d96655b7e449f9bd47c5f5b752
+  - enabled: 1
+    path: Assets/Scenes/Escena Diablo.unity
+    guid: 6853fb217c998ab4ca62cd67fee73ce2
+  - enabled: 1
+    path: Assets/Scenes/Escena Ritmo Diablo.unity
+    guid: ba1221dc29d41c348ba5e56cbf8fbe08
+  - enabled: 1
+    path: Assets/Scenes/Dialogo Diablo.unity
+    guid: 55672d9ec7615564382bcbbd9ca87e66
+  - enabled: 1
+    path: Assets/Scenes/YouWon.unity
+    guid: 44b0d2f43e08e884db69688ac6a17256
   m_configObjects: {}

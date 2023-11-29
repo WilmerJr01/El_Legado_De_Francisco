@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Dialogo1 : MonoBehaviour
 {
@@ -59,6 +61,7 @@ public class Dialogo1 : MonoBehaviour
             TextDialogo.text = string.Empty;
             StartCoroutine(EscribirLinea());
         } else {
+            SceneManager.LoadScene(8);
             gameObject.SetActive(false);
         }
     }

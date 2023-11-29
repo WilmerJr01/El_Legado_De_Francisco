@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 102807301}
   - component: {fileID: 102807300}
   - component: {fileID: 102807302}
+  - component: {fileID: 102807303}
   m_Layer: 5
   m_Name: PanelDialogo
   m_TagString: Untagged
@@ -331,9 +332,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102807298}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3abf7656e8c9084191e21351e753d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialogo: {fileID: 1797035114}
+  lineas:
+  - Colombia esta llena de mitos y leyendas. Esta es una de ellas, su nombre es Francisco,
+    Francisco el hombre.
+  - Francisco es un juglar vallenato, va de pueblo en pueblo con su acordeon tocando
+    melodias para alegrar el alma de quien las escuche.
+  - "Actualmente se encuentra en un peque\xF1o pueblo del Tolima "
+  - "Entra a la cantina para dar un peque\xF1o concierto, usa el WASD o las flechas
+    para moverte."
+  textSpeed: 0.1
+--- !u!114 &102807303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102807298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80dc74bf5bbbd9844bfcf65d21635a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TextDialogo: {fileID: 1797035114}
